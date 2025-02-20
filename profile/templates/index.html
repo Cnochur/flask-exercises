@@ -1,19 +1,103 @@
 {% extends "base.html" %}
-{% block title %}Home{% endblock title%}
+
+{% block title %}Home - Cnochur Saunders{% endblock %}
+
 {% block main_content %}
+    <div class="container">
+        <!-- Welcome Section -->
+        <div class="text-center my-5">
+            <h1 class="display-4 text-light">Welcome to My Personal Website</h1>
+            <p class="lead text">I'm a passionate developer and designer based in the digital world.</p>
+            <a href="{{ url_for('contact.home') }}" class="btn btn-dark btn-lg mt-3">Send me a request/message</a>
+        </div>
 
-<div class="landing-view">
-    <!--Need a nice background and maybe some small animation?-->
-    <h1>Hello</h1>
-    <p>My name is Cnochur</p>
-</div>
-<!-- Under here then have informatioon on programming langs, techs/frameworks-->
+        <!-- Image Section -->
+        <div class="row justify-content-center my-5">
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='assets/img-profile.jpg') }}" class="img-fluid rounded-circle" alt="Cnochur Saunders">
+            </div>
+        </div>
 
-<div class="about-me">
-    <!-- offset to the left -->
-    <h2>Me</h2>
-    <!-- insert image here -->
-    <p>General about me paragraph</p>
-</div>
+        <!-- About Section -->
+        <div class="text-center">
+            <h2 class="text-light">About Me</h2>
+            <p class="text">
+                I'm a developer with a focus on creating innovative solutions using modern technologies. Whether it's building user-friendly websites or developing complex backend systems, I love the challenge of bringing ideas to life. I'm constantly learning and evolving in the field of technology.
+            </p>
+        </div>
 
-{% endblock main_content %}
+        <!-- Skills Section -->
+        <div class="row justify-content-center my-5">
+            <div class="col-md-4">
+                <h3 class="text-light">Technologies & Frameworks</h3>
+                <ul class="list-unstyled text">
+                    <li><strong>Front-end:</strong> HTML, CSS</li>
+                    <li><strong>Back-end:</strong> Python (Flask)</li>
+                    <li><strong>Database:</strong> MySQL, SQLite3</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3 class="text-light">Programming Languages</h3>
+                <ul class="list-unstyled">
+                    <li>Python</li>
+                    <li>SQL</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3 class="text-light">Tools & Technologies</h3>
+                <ul class="list-unstyled text">
+                    <li>Git, GitHub</li>
+                    <li>VS Code</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Portfolio Section -->
+        <div class="text-center my-5">
+            <h2 class="text-light">My Work</h2>
+            <p class="text">Here are some of the projects I have worked on. Check them out:</p>
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-dark text-light">
+                        <img src="{{ url_for('static', filename='assets/project1.jpg') }}" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 1</h5>
+                            <p class="card-text">Description of project 1, what I did, and the technologies used.</p>
+                            <a href="#" class="btn btn-dark">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-dark text-light">
+                        <img src="{{ url_for('static', filename='assets/project2.jpg') }}" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 2</h5>
+                            <p class="card-text">Description of project 2, what I did, and the technologies used.</p>
+                            <a href="#" class="btn btn-dark">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-dark text-light">
+                        <img src="{{ url_for('static', filename='assets/project3.jpg') }}" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Project 3</h5>
+                            <p class="card-text">Description of project 3, what I did, and the technologies used.</p>
+                            <a href="#" class="btn btn-dark">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action Section -->
+        <div class="text-center my-5">
+            <h2 class="text-light">Let's Work Together!</h2>
+            <p class="text">Have a project in mind? Let's create something amazing together. Feel free to reach out to me.</p>
+            <a href="{{ url_for('contact.home') }}" class="btn btn-dark btn-lg">Get in Touch</a>
+        </div>
+    </div>
+{% endblock %}

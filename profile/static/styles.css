@@ -1,93 +1,122 @@
-/* Ensure the body and html take up the full height */
-html, body {
-    height: 100%;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #121212; /* Dark theme background */
-    color: #e0e0e0; /* Light text */
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Arial', sans-serif;
-    display: flex;
-    flex-direction: column;
+    background-color: #121212; /* Dark background */
+    color: #EDEDED; /* Light text color */
+    line-height: 1.6;
 }
 
-/* Navbar Styling */
-/* 🌙 Dark Theme Navbar with Emerald Green Accents */
-
-.nav {
-    background-color: #1a1a1a; /* Dark background */
-    padding: 15px;
-    border-radius: 8px;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end; /* Aligns items to the right */
+/* Navbar */
+nav {
+background-color: #151515; /* Dark navbar background */
 }
 
-/* Pills Navigation */
-.nav-pills .nav-link {
-    color: #e0e0e0; /* Light text */
-    background-color: transparent;
-    transition: 0.3s ease-in-out;
-    padding: 10px 20px;
-    border-radius: 8px;
-    margin: 0 5px;
+h3 {
+    color: #27ae60;
+}
+.navbar-nav .nav-link {
+    color: #EDEDED;
+    font-size: 1.1rem;
 }
 
-/* Active Pill */
-.nav-pills .nav-link.active {
-    background-color: #2ecc71; /* Emerald Green */
-    color: #121212 !important; /* Dark text for contrast */
+.navbar-nav .nav-link:hover {
+    color: #27ae60; /* Dark green accent */
 }
 
-/* Hover Effect */
-.nav-pills .nav-link:hover {
-    background-color: #27ae60; /* Slightly darker emerald */
+/* Home Page */
+.text-center h1 {
+    font-size: 3rem;
     color: #ffffff;
 }
 
-
-/* Landing View takes remaining space */
-.landing-view {
-    flex-grow: 1; /* Takes up all available space after the navbar */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centers vertically */
-    align-items: center; /* Centers horizontally */
-    text-align: center;
-    padding: 20px;
+.text-center p {
+    color: #95a5a6; /* Light grey for muted text */
 }
 
-/* Heading and Paragraph Styling */
-.landing-view h1 {
+.text-center .btn {
+    background-color: #27ae60; /* Dark green button */
+    color: #fff;
+}
+
+.text-center .btn:hover {
+    background-color: #2ecc71; /* Brighter green on hover */
+}
+
+/* About & Contact Pages */
+.text-center h1 {
     font-size: 3rem;
-    color: #2ecc71; /* Emerald Green */
-    margin-bottom: 10px;
+    color: #ffffff;
 }
 
-.landing-view p {
-    font-size: 1.5rem;
-    color: #b0b0b0; /* Light gray */
+.text-center p {
+    color: #BDC3C7;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .landing-view h1 {
-        font-size: 2.5rem;
-    }
+.text-center ul {
+    list-style-type: none;
+    padding-left: 0;
+}
 
-    .landing-view p {
-        font-size: 1.2rem;
-    }
-    .nav {
-        flex-direction: column;
-        align-items: center;
-    }
+.text-center .link-like-text {
+    color: #27ae60; /* Dark green accent for links */
+    font-size: 1.1rem;
+    text-decoration: none;
+}
 
-    .nav-pills {
-        width: 100%;
-        text-align: center;
-    }
+.text-center .link-like-text:hover {
+    color: #2ecc71; /* Bright green on hover */
+}
 
-    .nav-pills .nav-link {
-        width: 100%;
-    }
+/* Projects Page */
+.card {
+    background-color: #1c2833; /* Dark background for cards */
+}
+
+.card-title {
+    color: #27ae60; /* Green accent for project titles */
+}
+
+.card-text {
+    color: #BDC3C7;
+}
+
+.card-body .btn {
+    background-color: #27ae60;
+    color: white;
+}
+
+.card-body .btn:hover {
+    background-color: #2ecc71;
+}
+
+/* Footer */
+footer {
+    background-color: #151515;
+    color: #fff;
+}
+
+/* Contact Page Specific Styles */
+ul.list-unstyled {
+    margin-top: 20px;
+    padding-left: 0;
+}
+
+ul.list-unstyled li {
+    margin: 10px 0;
+}
+
+ul.list-unstyled a {
+    color: #27ae60;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+ul.list-unstyled a:hover {
+    color: #2ecc71;
 }
