@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock title%}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <ul class="nav justify-content-end nav-pills">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{url_for('index.home')}}">Home</a>
+          <a class="nav-link" aria-current="page" href="{{url_for('index.home')}}">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{url_for('projects.home')}}">Projects</a>
@@ -18,7 +19,8 @@
           <a class="nav-link" href="{{url_for('contact.home')}}">Contact</a>
         </li>
       </ul>
-    <h2>{% block main_title %}{% endblock main_title%}</h2>
     {% block main_content %}{% endblock main_content %}
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gyb6a6A8u+QeE6M6J3o38meup5b5FeY7z9Oa4mPY9wO8bWzN1v4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-c5MQriPYYyRWlM8OLzW0lGSsqF6rxGbVp6tFCQ5wT1ckF3qqt5SFOeHc+hgT2Ozx" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,93 @@
+/* Ensure the body and html take up the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark theme background */
+    color: #e0e0e0; /* Light text */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar Styling */
+/* 🌙 Dark Theme Navbar with Emerald Green Accents */
+
+.nav {
+    background-color: #1a1a1a; /* Dark background */
+    padding: 15px;
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Aligns items to the right */
+}
+
+/* Pills Navigation */
+.nav-pills .nav-link {
+    color: #e0e0e0; /* Light text */
+    background-color: transparent;
+    transition: 0.3s ease-in-out;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: 0 5px;
+}
+
+/* Active Pill */
+.nav-pills .nav-link.active {
+    background-color: #2ecc71; /* Emerald Green */
+    color: #121212 !important; /* Dark text for contrast */
+}
+
+/* Hover Effect */
+.nav-pills .nav-link:hover {
+    background-color: #27ae60; /* Slightly darker emerald */
+    color: #ffffff;
+}
+
+
+/* Landing View takes remaining space */
+.landing-view {
+    flex-grow: 1; /* Takes up all available space after the navbar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically */
+    align-items: center; /* Centers horizontally */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Heading and Paragraph Styling */
+.landing-view h1 {
+    font-size: 3rem;
+    color: #2ecc71; /* Emerald Green */
+    margin-bottom: 10px;
+}
+
+.landing-view p {
+    font-size: 1.5rem;
+    color: #b0b0b0; /* Light gray */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .landing-view h1 {
+        font-size: 2.5rem;
+    }
+
+    .landing-view p {
+        font-size: 1.2rem;
+    }
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-pills {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-pills .nav-link {
+        width: 100%;
+    }
+}
