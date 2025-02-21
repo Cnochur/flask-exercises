@@ -1,119 +1,155 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212; /* Dark background */
-    color: #EDEDED; /* Light text color */
-    line-height: 1.6;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
 }
 
 /* Navbar */
-nav {
-background-color: #151515; /* Dark navbar background */
+.navbar {
+    background-color: #161b22;
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #3ba55d !important;
 }
 
 .navbar-nav .nav-link {
-    color: #EDEDED;
+    color: #c9d1d9 !important;
     font-size: 1.1rem;
+    margin-left: 15px;
+    transition: color 0.3s;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #27ae60; /* Dark green accent */
+    color: #3ba55d !important;
 }
 
-/* Home Page */
-.text-center h1 {
-    font-size: 3rem;
-    color: #ffffff;
+/* Skills Section */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
 
-.text-center p {
-    color: #95a5a6; /* Light grey for muted text */
-}
-
-.text-center .btn {
-    background-color: #27ae60; /* Dark green button */
-    color: #fff;
-}
-
-.text-center .btn:hover {
-    background-color: #2ecc71; /* Brighter green on hover */
-}
-
-/* About & Contact Pages */
-.text-center h1 {
-    font-size: 3rem;
-    color: #ffffff;
-}
-
-.text-center p {
-    color: #BDC3C7;
-}
-
-.text-center ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.text-center .link-like-text {
-    color: #27ae60; /* Dark green accent for links */
+.skills-list {
     font-size: 1.1rem;
-    text-decoration: none;
+    line-height: 1.8;
+    width: 300px;
+    background-color: #161b22;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.text-center .link-like-text:hover {
-    color: #2ecc71; /* Bright green on hover */
+.skill-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #0d1117;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Projects Page */
-.card {
-    background-color: #1c2833; /* Dark background for cards */
+.skill-item i {
+    font-size: 1.5rem;
+    color: #3ba55d;
 }
 
-.card-title {
-    color: #27ae60; /* Green accent for project titles */
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(59, 165, 93, 0.2);
 }
 
-.card-text {
-    color: #BDC3C7;
+.skill-item strong {
+    font-weight: bold;
+    color: #c9d1d9;
 }
 
-.card-body .btn {
-    background-color: #27ae60;
+/* Contact Form */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 500px;
+    background-color: #161b22;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0d1117;
+    color: #c9d1d9;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3ba55d;
     color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
-.card-body .btn:hover {
-    background-color: #2ecc71;
+.contact-form button:hover {
+    background-color: #2a7f49;
 }
 
 /* Footer */
 footer {
-    background-color: #151515;
-    color: #fff;
-}
-
-/* Contact Page Specific Styles */
-ul.list-unstyled {
+    background-color: #161b22;
+    padding: 15px;
+    font-size: 1rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
     margin-top: 20px;
-    padding-left: 0;
 }
 
-ul.list-unstyled li {
-    margin: 10px 0;
+footer p {
+    margin: 0;
+    color: #8b949e;
 }
 
-ul.list-unstyled a {
-    color: #27ae60;
-    font-size: 1.2rem;
-    text-decoration: none;
-}
-
-ul.list-unstyled a:hover {
-    color: #2ecc71;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-container {
+        height: auto;
+        padding: 20px;
+    }
+    .contact-form {
+        width: 90%;
+    }
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-toggler {
+        border: none;
+    }
 }
