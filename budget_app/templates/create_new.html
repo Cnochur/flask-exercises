@@ -8,28 +8,34 @@
     <form action="/create_new/" method="POST">
         <!--Input salary-->
         <label for="salary">Salary:</label>
-        <input type="number" id="salary" name="salary" required>
-        <!--Add Bill item-->
-        <label for="bill_item">Bill Item:</label>
-        <input type="text" id="bill_item" name="bill_item" required>
-        <!--Add Nec Item-->
-        <label for="nec_item">Necessary Item:</label>
-        <input type="text" id="nec_item" name="nec_item" required>
+        <input type="text" id="salary" name="salary" required>
+        <!--Bill item-->
+        <div class="Add_bill_item">
+            <label for="bill_item">Bill Item:</label>
+            <input type="text" id="bill_item" name="bill_item" required>
+            <button type="submit" id="add_bill_item">Add</button>
+                <!--Display bills here-->
+            <div class="bills_display">
+                <ul class="bills_list">
+                    <li class="bill_item"></li>
+                </ul>
+            </div>
+        </div>
+        <!--Nec Item-->
+        <div class="Add_nec_item">
+            <label for="nec_item">Bill Item:</label>
+            <input type="text" id="nec_item" name="nec_item" required>
+            <button type="submit" id="add_nec_item">Add</button>
+                <!--Display bills here-->
+            <div class="bills_display">
+                <ul class="bills_list">
+                    <li class="bill_item"></li>
+                </ul>
+            </div>
+        </div>
         <!--Submit the final form-->
         <button type="submit" id="submit_form">Create</button>
     </form>
-    <!--Display bills here-->
-    <div class="bills_display">
-        <ul class="bills_list">
-            <li class="bill_item"></li>
-        </ul>
-    </div>
-    <!--Display necs here-->
-    <div class="bills_display">
-        <ul class="necs_list">
-            <li class="nec_item"></li>
-         </ul>
-    </div>
 </div>
 
 {% endblock %}
