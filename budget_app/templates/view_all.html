@@ -4,13 +4,15 @@
 
 <h2>All Months</h2>
 <div class="display_months">
+    {% for month in months %}
     <div class="month_card">
-        <h4>Month: {{ month_created }}</h3>
-        <h4>Salary: {{ sal }}</h4>
-        <h4>Bills Total: {{ bills_total }}</h4>
-        <h4>Necessities Total: {{ necessities_total }}</h4>
-        <h4>Remaining when created: {{ remain }}</h4>
+        <h4>Month: {{ month.crerated_at }}</h3>
+        <h4>Salary: {{ month.sal }}</h4>
+        <h4>Bills Total: {{ month.bills }}</h4>
+        <h4>Necessities Total: {{ month.necs }}</h4>
+        <h4>Remaining when created: {{ month.remaining }}</h4>
     </div>
+    {% endfor %}
 </div>
 
 {% endblock %}
