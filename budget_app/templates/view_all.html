@@ -2,6 +2,15 @@
 
 {% block content %}
 
-<h2>display all mopnths</h2>
+<h2>All Months</h2>
+<div class="display_months">
+    <div class="month_card">
+        <h4>Month: {{ month_created }}</h3>
+        <h4>Salary: {{ sal }}</h4>
+        <h4>Bills Total: {{ bills_total }}</h4>
+        <h4>Necessities Total: {{ necessities_total }}</h4>
+        <h4>Remaining when created: {{ remain }}</h4>
+    </div>
+</div>
 
 {% endblock %}
