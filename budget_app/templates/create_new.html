@@ -4,4 +4,33 @@
 
 <h2>Create New Month</h2>
 
+<div class="create_form">
+    <form class="create">
+        <!--Input salary-->
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" name="salary" required>
+        <!--Bills-->
+        <div class="bills">
+            <button class="add_item" id="add_item">Add Bill Item</button>
+            <!--Display bills here-->
+            <div class="bills_display">
+                <ul class="bills_list">
+                    <li class="bill_item"></li>
+                </ul>
+            </div>
+        </div>
+        <!--Necessities-->
+        <div class="necs">
+            <button class="add_item">Add Necessary Item</button>
+            <!--Display necs here-->
+            <div class="bills_display">
+                <ul class="necs_list">
+                    <li class="nec_item"></li>
+                </ul>
+            </div>
+        </div>
+        <button type="submit">Create</button>
+    </form>
+</div>
+
 {% endblock %}
