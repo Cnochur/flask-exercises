@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="main-container">
+    <div class="header-container">
+        <h1>Welcome header</h1>
+    </div>
+    <div class="current-month-container">
+        <h1>Display current month</h1>
+    </div>
+    <div class="button-display">
+        <a href="{{ url_for('create_new')}}">
+            <button class="man-btn">Create new</button>
+        </a>
+        <a href="{{ url_for('view_all')}}">
+            <button class="man-btn">View All</button>
+        </a>
+        <a href="#">
+            <button class="man-btn">Exit</button>
+        </a>
+    </div>
+</div>  
+
+{% endblock %}
